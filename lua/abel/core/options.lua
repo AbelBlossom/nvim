@@ -37,3 +37,7 @@ opt.splitbelow = true -- split horizontal window to the bottom
 
 -- turn off swapfile
 opt.swapfile = false
+
+-- undodir
+-- SETUP: create the ~/.vim/undodir directory
+opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
