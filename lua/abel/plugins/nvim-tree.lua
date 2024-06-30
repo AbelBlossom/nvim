@@ -25,6 +25,12 @@ return {
               arrow_open = "", -- arrow when folder is open
             },
           },
+          show = {
+            file = false,
+            folder = false,
+            folder_arrow = true,
+            git = true,
+          },
         },
       },
       -- disable window_picker for
@@ -38,7 +44,7 @@ return {
         },
       },
       filters = {
-        custom = { ".DS_Store" },
+        custom = { ".DS_Store", ".git", "node_modules" },
       },
       git = {
         ignore = false,
