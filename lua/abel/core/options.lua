@@ -14,11 +14,13 @@ opt.autoindent = true -- copy indent from current line when starting new one
 opt.wrap = false
 
 -- search settings
+opt.incsearch = true -- show search matches as you type
+opt.hlsearch = true -- highlight all matches
 opt.ignorecase = true -- ignore case when searching
 opt.smartcase = true -- if you include mixed case in your search, assumes you want case-sensitive
 
 opt.cursorline = true
-
+opt.completeopt = "menuone,noselect,noinsert"
 -- turn on termguicolors for tokyonight colorscheme to work
 -- (have to use iterm2 or any other true color terminal)
 opt.termguicolors = true
