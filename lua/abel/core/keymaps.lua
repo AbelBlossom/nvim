@@ -31,3 +31,7 @@ keymap.set("n", "N", "Nzzzv", { desc = "Move to previous search result" }) -- mo
 -- Resets
 keymap.set("n", "<C-o>", "<C-o>zz", { desc = "Jump to previous location" }) -- jump to previous location
 keymap.set("i", "jj", "<ESC>", { desc = "Exit insert mode with jj" }) -- exit insert mode with jj
+
+-- line move
+keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+keymap.set("v", "K", ":m '<-2<CR>gv=gv")
