@@ -143,6 +143,12 @@ return {
           single_file_support = true,
         })
       end,
+      ["pyright"] = function()
+        lspconfig["pyright"].setup({
+          -- capabilities = capabilities,
+          -- filetypes = { "python" },
+        })
+      end,
     })
   end,
 }

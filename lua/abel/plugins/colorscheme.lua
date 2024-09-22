@@ -51,18 +51,49 @@
 --     vim.cmd("colorscheme gruvbox")
 --   end,
 -- }
---
--- rose pine
+-- gruvbox material
 return {
-  "rose-pine/neovim",
-  name = "rose-pine",
+  "sainnhe/gruvbox-material",
+  lazy = false,
+  priority = 1000,
   config = function()
-    require("rose-pine").setup({
-      styles = {
-        transparency = true,
-        italic = false,
-      },
-    })
-    vim.cmd("colorscheme rose-pine-moon")
+    -- Optionally configure and load the colorscheme
+    -- directly inside the plugin declaration.
+    vim.g.gruvbox_material_transparent_background = 1
+    vim.g.gruvbox_material_dim_inactive_windows = 1
+    vim.g.gruvbox_material_enable_italic = true
+    vim.cmd.colorscheme("gruvbox-material")
   end,
 }
+--
+-- rose pine
+-- return {
+--   "rose-pine/neovim",
+--   name = "rose-pine",
+--   config = function()
+--     require("rose-pine").setup({
+--       styles = {
+--         transparency = true,
+--         italic = false,
+--       },
+--     })
+--     vim.cmd("colorscheme rose-pine-moon")
+--   end,
+-- }
+--
+-- Catpuccin
+-- return {
+--   "catppuccin/nvim",
+--   name = "catppuccin",
+--   priority = 1000,
+--   config = function()
+--     require("catppuccin").setup({
+--       flavour = "mocha",
+--       background = {
+--         light = "latte",
+--         dark = "mocha",
+--       },
+--     })
+--     vim.cmd("colorscheme catppuccin")
+--   end,
+-- }

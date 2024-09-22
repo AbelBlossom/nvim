@@ -35,3 +35,21 @@ keymap.set("i", "jj", "<ESC>", { desc = "Exit insert mode with jj" }) -- exit in
 -- line move
 keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+
+-- Disable arrow keys in normal mode
+keymap.set("n", "<Up>", "<NOP>", { noremap = true, silent = true })
+keymap.set("n", "<Down>", "<NOP>", { noremap = true, silent = true })
+keymap.set("n", "<Left>", "<NOP>", { noremap = true, silent = true })
+keymap.set("n", "<Right>", "<NOP>", { noremap = true, silent = true })
+
+-- Disable arrow keys in insert mode
+keymap.set("i", "<Up>", "<NOP>", { noremap = true, silent = true })
+keymap.set("i", "<Down>", "<NOP>", { noremap = true, silent = true })
+keymap.set("i", "<Left>", "<NOP>", { noremap = true, silent = true })
+keymap.set("i", "<Right>", "<NOP>", { noremap = true, silent = true })
+
+-- Disable arrow keys in visual mode
+keymap.set("v", "<Up>", "<NOP>", { noremap = true, silent = true })
+keymap.set("v", "<Down>", "<NOP>", { noremap = true, silent = true })
+keymap.set("v", "<Left>", "<NOP>", { noremap = true, silent = true })
+keymap.set("v", "<Right>", "<NOP>", { noremap = true, silent = true })
