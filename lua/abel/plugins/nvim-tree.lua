@@ -44,7 +44,7 @@ return {
         },
       },
       filters = {
-        custom = { ".DS_Store", ".git", "node_modules" },
+        custom = { ".DS_Store", "^.git$", "node_modules" },
       },
       git = {
         ignore = false,
