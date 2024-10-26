@@ -19,7 +19,7 @@ return {
         graphql = { "prettier" },
         liquid = { "prettier" },
         lua = { "stylua" },
-        python = { "isort" },
+        python = { "isort", "black" },
         go = { "gofmt", "goimports" },
       },
       format_on_save = {

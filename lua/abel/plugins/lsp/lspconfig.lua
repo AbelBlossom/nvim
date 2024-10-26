@@ -158,10 +158,28 @@ return {
           single_file_support = true,
         })
       end,
-      ["pyright"] = function()
-        lspconfig["pyright"].setup({
-          -- capabilities = capabilities,
-          -- filetypes = { "python" },
+      ["pylsp"] = function()
+        lspconfig["pylsp"].setup({
+          capabilities = capabilities,
+          filetypes = { "python" },
+          settings = {
+            formatCommand = { "black" },
+            pylsp = {
+              plugins = {
+                pyls_flake8 = { enabled = false },
+                pylint = {
+                  enabled = true,
+                  args = { "--rcfile", ".pylintrc" },
+                },
+                black = { enabled = true },
+                isort = { enabled = true },
+                pyls_mypy = {
+                  enabled = true,
+                  --live_mode = true,
+                },
+              },
+            },
+          },
         })
       end,
     })
