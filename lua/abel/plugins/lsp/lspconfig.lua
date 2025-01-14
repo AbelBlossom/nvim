@@ -94,7 +94,7 @@ return {
           capabilities = capabilities,
           on_attach = function(client, bufnr)
             vim.api.nvim_create_autocmd("BufWritePost", {
-              pattern = { "*.js", "*.ts" },
+              pattern = { "*.js", "*.ts", "*.svelte", "*.html" },
               callback = function(ctx)
                 -- Here use ctx.match instead of ctx.file
                 client.notify("$/onDidChangeTsOrJsFile", { uri = ctx.match })
@@ -115,21 +115,6 @@ return {
         lspconfig["emmet_ls"].setup({
           capabilities = capabilities,
           filetypes = { "html", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less", "svelte" },
-        })
-      end,
-      ["rust_analyzer"] = function()
-        -- configure rust language server
-        lspconfig["rust_analyzer"].setup({
-          capabilities = capabilities,
-          filetypes = { "rust" },
-          root_dir = lspconfig.util.root_pattern("Cargo.toml"),
-          settings = {
-            ["rust-analyzer"] = {
-              cargo = {
-                allFeatures = true,
-              },
-            },
-          },
         })
       end,
       ["lua_ls"] = function()
@@ -163,7 +148,7 @@ return {
           capabilities = capabilities,
           filetypes = { "python" },
           settings = {
-            formatCommand = { "black" },
+            formatCommand = { "black", "isort" },
             pylsp = {
               plugins = {
                 pyls_flake8 = { enabled = false },
@@ -171,12 +156,18 @@ return {
                   enabled = true,
                   args = { "--rcfile", ".pylintrc" },
                 },
+                pyflakes = { enabled = true },
+                pycodestyle = {
+                  enabled = true,
+                  ignore = { "W391" },
+                  maxLineLength = 120,
+                },
                 black = { enabled = true },
                 isort = { enabled = true },
-                pyls_mypy = {
-                  enabled = true,
-                  --live_mode = true,
-                },
+                -- pyls_mypy = {
+                --   enabled = true,
+                --   --live_mode = true,
+                -- },
               },
             },
           },

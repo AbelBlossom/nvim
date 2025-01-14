@@ -1,16 +1,16 @@
 return {
   {
     "CopilotC-Nvim/CopilotChat.nvim",
-    branch = "canary",
     dependencies = {
       { "zbirenbaum/copilot.lua" }, -- or github/copilot.vim
       { "nvim-lua/plenary.nvim" }, -- for curl, log wrapper
     },
     build = "make tiktoken", -- Only on MacOS or Linux
+    branch = "main",
     config = function()
-      require("CopilotChat.integrations.cmp").setup()
       require("CopilotChat").setup({
         debug = true,
+        chat_autocomplete = true,
       })
       -- set keymaps
       local keymap = vim.keymap -- for conciseness

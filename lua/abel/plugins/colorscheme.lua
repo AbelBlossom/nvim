@@ -62,6 +62,7 @@ return {
     vim.g.gruvbox_material_transparent_background = 1
     vim.g.gruvbox_material_dim_inactive_windows = 0
     vim.g.gruvbox_material_enable_italic = true
+    vim.g.gruvbox_material_disable_italic_comment = 0
     vim.cmd.colorscheme("gruvbox-material")
   end,
 }
@@ -93,6 +94,7 @@ return {
 --         light = "latte",
 --         dark = "mocha",
 --       },
+--       transparent_background = true,
 --     })
 --     vim.cmd("colorscheme catppuccin")
 --   end,
