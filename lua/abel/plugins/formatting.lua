@@ -21,6 +21,7 @@ return {
         lua = { "stylua" },
         python = { "isort", "black" },
         go = { "gofmt", "goimports" },
+        zig = { "zig fmt" },
       },
       format_on_save = {
         lsp_fallback = true,

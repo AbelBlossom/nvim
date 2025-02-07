@@ -117,6 +117,15 @@ return {
           filetypes = { "html", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less", "svelte" },
         })
       end,
+      ["zls"] = function()
+        lspconfig["zls"].setup({
+          capabilities = capabilities,
+          cmd = { "zls" },
+          filetypes = { "zig" },
+          root_dir = lspconfig.util.root_pattern("build.zig"),
+          settings = {},
+        })
+      end,
       ["lua_ls"] = function()
         -- configure lua server (with special settings)
         lspconfig["lua_ls"].setup({
