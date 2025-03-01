@@ -157,7 +157,7 @@ return {
           capabilities = capabilities,
           filetypes = { "python" },
           settings = {
-            formatCommand = { "black", "isort" },
+            formatCommand = { "black" },
             pylsp = {
               plugins = {
                 pyls_flake8 = { enabled = false },
