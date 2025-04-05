@@ -53,3 +53,17 @@ keymap.set("v", "<Up>", "<NOP>", { noremap = true, silent = true })
 keymap.set("v", "<Down>", "<NOP>", { noremap = true, silent = true })
 keymap.set("v", "<Left>", "<NOP>", { noremap = true, silent = true })
 keymap.set("v", "<Right>", "<NOP>", { noremap = true, silent = true })
+
+-- Vscode key
+if vim.g.vscode then
+  -- VSCode specific keymaps
+  keymap.set("n", "<leader>ff", "<Cmd>call VSCodeCall('workbench.action.quickOpen')<CR>")
+  keymap.set("n", "<leader>sv", "<Cmd>call VSCodeCall('workbench.action.splitEditor')<CR>")
+  keymap.set("n", "<leader>sh", "<Cmd>call VSCodeCall('workbench.action.splitEditorDown')<CR>")
+  keymap.set("n", "<leader>ee", "<Cmd>call VSCodeCall('workbench.action.toggleSidebarVisibility')<CR>")
+  keymap.set("n", "<leader>ee", "<Cmd>call VSCodeCall('workbench.action.toggleSidebarVisibility')<CR>")
+  keymap.set("n", "<leader>sx", "<Cmd>call VSCodeCall('workbench.action.closeActiveEditor')<CR>")
+  keymap.set("n", "<leader>ef", "<Cmd>call VSCodeCall('workbench.view.explorer')<CR>")
+  keymap.set("n", "<leader>rn", "<Cmd>call VSCodeCall('editor.action.rename')<CR>")
+  keymap.set("n", "<leader>ca", "<Cmd>call VSCodeCall('editor.action.quickFix')<CR>")
+end
