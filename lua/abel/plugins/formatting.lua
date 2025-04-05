@@ -1,6 +1,7 @@
 return {
   "stevearc/conform.nvim",
   event = { "BufReadPre", "BufNewFile" },
+  cond = not vim.g.vscode,
   config = function()
     local conform = require("conform")
 
@@ -19,8 +20,9 @@ return {
         graphql = { "prettier" },
         liquid = { "prettier" },
         lua = { "stylua" },
-        python = { "black" },
+        -- python = { "black" },
         go = { "gofmt", "goimports" },
+        sql = { "sqlfmt" },
         zig = { "zig fmt" },
       },
       format_on_save = {

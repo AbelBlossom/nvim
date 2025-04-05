@@ -56,6 +56,7 @@ return {
   "sainnhe/gruvbox-material",
   lazy = false,
   priority = 1000,
+  cond = not vim.g.vscode,
   config = function()
     -- Optionally configure and load the colorscheme
     -- directly inside the plugin declaration.

@@ -3,6 +3,7 @@ return {
   dependencies = { "nvim-tree/nvim-web-devicons", "folke/todo-comments.nvim" },
   opts = {},
   cmd = "Trouble",
+  cond = not vim.g.vscode,
   keys = {
     {
       "<leader>xw",

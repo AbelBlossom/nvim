@@ -4,6 +4,7 @@ return {
     "williamboman/mason-lspconfig.nvim",
     "WhoIsSethDaniel/mason-tool-installer.nvim",
   },
+  cond = not vim.g.vscode,
   config = function()
     -- import mason
     local mason = require("mason")
@@ -36,7 +37,7 @@ return {
         "graphql",
         "emmet_ls",
         "prismals",
-        "pylsp",
+        -- "pylsp",
         "gopls",
       },
     })
