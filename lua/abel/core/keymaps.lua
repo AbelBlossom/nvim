@@ -58,6 +58,7 @@ keymap.set("v", "<Right>", "<NOP>", { noremap = true, silent = true })
 if vim.g.vscode then
   -- VSCode specific keymaps
   keymap.set("n", "<leader>ff", "<Cmd>call VSCodeCall('workbench.action.quickOpen')<CR>")
+  keymap.set("n", "<leader>fs", "<Cmd>call VSCodeCall('workbench.action.quickTextSearch')<CR>")
   keymap.set("n", "<leader>sv", "<Cmd>call VSCodeCall('workbench.action.splitEditor')<CR>")
   keymap.set("n", "<leader>sh", "<Cmd>call VSCodeCall('workbench.action.splitEditorDown')<CR>")
   keymap.set("n", "<leader>ee", "<Cmd>call VSCodeCall('workbench.action.toggleSidebarVisibility')<CR>")
