@@ -4,7 +4,6 @@ return {
     "williamboman/mason-lspconfig.nvim",
     "WhoIsSethDaniel/mason-tool-installer.nvim",
   },
-  cond = not vim.g.vscode,
   config = function()
     -- import mason
     local mason = require("mason")
@@ -27,6 +26,7 @@ return {
 
     mason_lspconfig.setup({
       -- list of servers for mason to install
+      automatic_enable = true,
       ensure_installed = {
         "ts_ls",
         "html",
@@ -37,7 +37,7 @@ return {
         "graphql",
         "emmet_ls",
         "prismals",
-        -- "pylsp",
+        "pyright",
         "gopls",
       },
     })

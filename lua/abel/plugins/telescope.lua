@@ -7,7 +7,6 @@ return {
     "nvim-tree/nvim-web-devicons",
     "folke/todo-comments.nvim",
   },
-  cond = not vim.g.vscode,
   config = function()
     local telescope = require("telescope")
     local actions = require("telescope.actions")

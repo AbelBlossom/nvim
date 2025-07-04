@@ -2,7 +2,6 @@ return {
   "folke/todo-comments.nvim",
   event = { "BufReadPre", "BufNewFile" },
   dependencies = { "nvim-lua/plenary.nvim" },
-  cond = not vim.g.vscode,
   config = function()
     local todo_comments = require("todo-comments")
 

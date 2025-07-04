@@ -1,6 +1,5 @@
 return {
   "rmagatti/auto-session",
-  cond = not vim.g.vscode,
   config = function()
     local auto_session = require("auto-session")
 

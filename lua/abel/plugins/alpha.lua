@@ -1,7 +1,6 @@
 return {
   "goolord/alpha-nvim",
   event = "VimEnter",
-  cond = not vim.g.vscode,
   config = function()
     local alpha = require("alpha")
     local dashboard = require("alpha.themes.dashboard")
